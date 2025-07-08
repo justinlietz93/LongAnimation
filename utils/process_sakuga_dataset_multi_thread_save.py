@@ -16,7 +16,7 @@ def from_time_2_second(time_str):
 
 
 # 读取数据
-df = pd.read_parquet("/home/cn/Datasets/SakugaDataset/parquet/test/sakugadataset_test.parquet")
+df = pd.read_parquet("")
 df = df[['identifier', 'scene_start_time', 'scene_end_time', 'fps', "text_description", "aesthetic_score", "dynamic_score"]]
 df = df.dropna(subset=['scene_start_time', 'scene_end_time', 'fps', "text_description", "aesthetic_score", "dynamic_score"])
 df['identifier_video'] = df['identifier'].apply(lambda x: int(x.split(':')[0]))
